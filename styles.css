@@ -1,0 +1,75 @@
+body {
+	background-color: rgb(233, 223, 255);
+	font-family: 'Open Sans', sans-serif;
+	padding: 32px;
+	color: rgb(44, 44, 44);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	color: rgb(83, 49, 156);
+}
+
+.container {
+	background-color: white;
+	width: 100%;
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	position: relative;
+}
+
+.tabs {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: rgb(200, 175, 255);
+	padding: 16px;
+}
+
+.tabs p {
+	padding: 8px;
+}
+
+.tabs p:hover {
+	color: rgb(83, 49, 156);
+	cursor: pointer;
+}
+
+.tabs p.active {
+	color: rgb(83, 49, 156);
+	/* used for the underline below the active tab */
+	position: relative;
+}
+
+.line {
+	height: 3px;
+	width: 100%;
+	background-color: rgb(231, 231, 231);
+
+	/* notice we set position: relative on .container */
+	position: absolute;
+	top: 98px; /* trial and error using dev tools calculations */
+}
+
+/* to add the underline below the active tab */
+.tabs .active::before {
+	content: '';
+	width: 200%;
+	height: 4px;
+	background-color: rgb(83, 49, 156);
+	/* this underline is positioned wrt .tabs p.active */
+	position: absolute;
+	bottom: -32px; /* trial and error */
+	left: -50%;
+	z-index: 2;
+
+	border-radius: 10px;
+}
