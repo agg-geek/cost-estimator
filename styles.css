@@ -45,7 +45,6 @@ h1 {
 
 .tabs p.active {
 	color: rgb(83, 49, 156);
-	/* used for the underline below the active tab */
 	position: relative;
 }
 
@@ -53,23 +52,53 @@ h1 {
 	height: 3px;
 	width: 100%;
 	background-color: rgb(231, 231, 231);
-
-	/* notice we set position: relative on .container */
 	position: absolute;
-	top: 98px; /* trial and error using dev tools calculations */
+	top: 98px;
 }
 
-/* to add the underline below the active tab */
 .tabs .active::before {
 	content: '';
 	width: 200%;
 	height: 4px;
 	background-color: rgb(83, 49, 156);
-	/* this underline is positioned wrt .tabs p.active */
 	position: absolute;
-	bottom: -32px; /* trial and error */
+	bottom: -32px;
 	left: -50%;
 	z-index: 2;
-
 	border-radius: 10px;
+}
+
+.toggle-wrapper {
+	display: flex;
+}
+
+.toggle-wrapper img {
+	height: 40px;
+	margin: 0 16px;
+}
+
+.toggle {
+	background-color: rgb(83, 49, 156);
+	height: 32px;
+	width: 140px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 0 4px 0 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.toggle span:first-of-type {
+	color: white;
+}
+
+.toggle span:last-of-type {
+	background-color: white;
+	color: rgb(83, 49, 156);
+	padding: 4px 16px;
+	border-radius: 20px;
 }

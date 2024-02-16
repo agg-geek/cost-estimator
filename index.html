@@ -18,22 +18,21 @@
 		<div class="container">
 			<div class="tabs">
 				<p>Free</p>
-				<p class="active">
-					Team
-					<!-- this purple underline below active tab is not possible with border-bottom as the border has rounded corners
-                         also you will need to adjust padding to make it work with border-bottom
-                         you could've accomplished this using div.line logic (see below) 
-                         but that would be bad because if you wanted to change the active tab, then this underline also needs to be moved
-                         thus we will instead use ::before -->
-					<!-- <span class="underline"></span> -->
-				</p>
+				<p class="active">Team</p>
 				<p>Professional</p>
 				<p>Enterprise</p>
 			</div>
 
-			<!-- we use positioning to add the grey line below the tabs
-                we could've used border bottom for this, but this is a demo using positioning -->
 			<div class="line"></div>
+
+			<div class="toggle-wrapper">
+				<img src="images/icon1.png" alt="" />
+				<div class="toggle">
+					<span>Mobile</span>
+					<span>Web</span>
+				</div>
+				<img src="images/icon2.png" alt="" />
+			</div>
 		</div>
 	</body>
 </html>
